@@ -5,6 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import jpabook.jpashop.domain.Book;
 import jpabook.jpashop.domain.Order;
 import jpabook.jpashop.domain.OrderItem;
 
@@ -19,11 +20,11 @@ public class JpaMain {
 		
 		try {
 			
-			Order order = new Order();
+			Book book = new Book();
+			book.setName("JPA");
+			book.setAuthor("±è¿µÇÑ");
 			
-			order.addOrderItem(new OrderItem());
-			 
-			em.persist(order);
+			em.persist(book);
 			
 			tx.commit();
 			
