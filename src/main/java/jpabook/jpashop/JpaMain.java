@@ -1,5 +1,7 @@
 package jpabook.jpashop;
 
+import java.lang.reflect.Member;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -20,13 +22,8 @@ public class JpaMain {
 		
 		try {
 			
-			Book book = new Book();
-			book.setName("JPA");
-			book.setAuthor("±è¿µÇÑ");
 			
-			em.persist(book);
 			
-			tx.commit();
 			
 		} catch (Exception e) {
 			// TODO: handle exception
